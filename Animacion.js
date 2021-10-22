@@ -217,11 +217,26 @@ function initBuffers(gl) {
   gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
 
   const vertexNormals = [
-    // Front
+     // Front
      0.0,  0.0,  1.0,
      0.0,  0.0,  1.0,
      0.0,  0.0,  1.0,
      0.0,  0.0,  1.0,
+
+     
+    // Right
+    1.0,  0.0,  0.0,
+    1.0,  0.0,  0.0,
+    1.0,  0.0,  0.0,
+    1.0,  0.0,  0.0,
+    
+
+
+    // Left
+    -1.0,  0.0,  0.0,
+    -1.0,  0.0,  0.0,
+    -1.0,  0.0,  0.0,
+    -1.0,  0.0,  0.0,
 
     // Back
      0.0,  0.0, -1.0,
@@ -241,17 +256,6 @@ function initBuffers(gl) {
      0.0, -1.0,  0.0,
      0.0, -1.0,  0.0,
 
-    // Right
-     1.0,  0.0,  0.0,
-     1.0,  0.0,  0.0,
-     1.0,  0.0,  0.0,
-     1.0,  0.0,  0.0,
-
-    // Left
-    -1.0,  0.0,  0.0,
-    -1.0,  0.0,  0.0,
-    -1.0,  0.0,  0.0,
-    -1.0,  0.0,  0.0,
   ];
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertexNormals),
@@ -263,36 +267,37 @@ function initBuffers(gl) {
   gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
 
   const textureCoordinates = [
-    // Front
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Back
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Top
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Bottom
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Right
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
-    // Left
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
+     // Front
+     0.0,  0.0,
+     1.0,  0.0,
+     1.0,  1.0,
+     0.0,  1.0,
+     // Back
+     0.0,  0.0,
+     1.0,  0.0,
+     1.0,  1.0,
+     0.0,  1.0,
+     // Top
+     0.0,  0.0,
+     1.0,  0.0,
+     1.0,  1.0,
+     0.0,  1.0,
+     // Bottom
+     0.0,  0.0,
+     1.0,  0.0,
+     1.0,  1.0,
+     0.0,  1.0,
+     // Right
+     0.0,  0.0,
+     1.0,  0.0,
+     1.0,  1.0,
+     0.0,  1.0,
+     // Left
+     0.0,  0.0,
+     1.0,  0.0,
+     1.0,  1.0,
+     0.0,  1.0,
+    
   ];
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
@@ -590,3 +595,4 @@ function loadShader(gl, type, source) {
 
   return shader;
 }
+
