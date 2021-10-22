@@ -93,7 +93,7 @@ function main() {
 
   const texture = initTexture(gl);
 
-  const video = setupVideo('Nubes.mp4');
+  const video = setupVideo('Ciudad.mp4');
 
   var then = 0;
 
